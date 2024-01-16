@@ -347,6 +347,13 @@ h6 {
   display: flex;
 }
 
+#home .ornament {
+  position: absolute;
+  top: 150px;
+  left: 74px;
+  z-index: -1;
+}
+
 @media (max-width: 991px) {
   #home .container {
     padding-top: 60px;
@@ -401,6 +408,21 @@ h6 {
   float: left;
 }
 
+#home .hero-wave {
+  width: auto;
+  margin-bottom: -40px;
+}
+
+#home .hero-bg {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/img/bg-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 0;
+}
+
 @media (max-width: 991px) {
   #home .home-info {
     width: 80%;
@@ -433,6 +455,15 @@ h6 {
     font-size: 34px;
     margin-bottom: 30px;
   }
+}
+
+#home .home-info-content h1 {
+  color: #fff;
+  font-family: "Figtree", sans-serif;
+  font-size: 40px;
+  font-style: bold;
+  font-weight: 800;
+  line-height: normal;
 }
 
 #home .home-info .btn-get-started,
