@@ -19,6 +19,7 @@ a {
   color: #007bff;
   text-decoration: none;
   transition: 0.5s;
+  font-family: "Figtree", sans-serif;
 }
 
 a:hover,
@@ -148,7 +149,6 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   color: #004289;
   font-weight: 500;
@@ -345,6 +345,7 @@ h6 {
 #home .container {
   padding-top: 100px;
   display: flex;
+  position: relative;
 }
 
 #home .ornament {
@@ -372,9 +373,10 @@ h6 {
   padding-left: 40px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   #home .hero-text {
     padding-left: 0;
+    font-size: 40px;
   }
 }
 
@@ -404,21 +406,94 @@ h6 {
 
 #home .home-info {
   width: 50%;
-  float: left;
+  margin-top: -100px;
 }
 
 #home .hero-wave {
-  width: auto;
-  margin-bottom: -40px;
+  width: 100%;
+  margin-bottom: -50px;
+  z-index: -99;
+}
+
+@media (max-width: 991px) {
+  #home .hero-wave {
+    margin-bottom: -10px;
+  }
 }
 
 #home .hero-bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 60vh;
-  background-image: url("/assets/img/Desktop\ -\ 4.png");
+  padding: 20px 0;
+  background-color: #f7c714;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 20% 50%;
+  background-position: 20% 60%;
+}
+
+#home .hero-bg .hero-ornament {
+  position: absolute;
+}
+
+#home .hero-bg .hero-ornament:nth-child(1) {
+  top: -70px;
+  right: 0;
+}
+
+@media (max-width: 991px) {
+  #home .hero-bg .hero-ornament {
+    display: none;
+  }
+
+  #home .hero-bg .hero-ornament:nth-child(1) {
+    display: block;
+    top: -20px;
+    right: 0;
+    width: 80px;
+  }
+
+  #home .hero-bg .hero-ornament:nth-child(3) {
+    display: block;
+    bottom: 0;
+    width: 80px;
+  }
+
+  #home .hero-bg .hero-ornament:nth-child(7) {
+    display: block;
+  }
+}
+
+#home .hero-bg .hero-ornament:nth-child(2) {
+  top: -80px;
+  left: 0;
+}
+
+#home .hero-bg .hero-ornament:nth-child(3) {
+  bottom: 156px;
+  left: -20px;
+}
+
+#home .hero-bg .hero-ornament:nth-child(4) {
+  bottom: 0px;
+}
+
+#home .hero-bg .hero-ornament:nth-child(5) {
+  bottom: 0;
+  left: 0;
+}
+
+#home .hero-bg .hero-ornament:nth-child(6) {
+  bottom: -70px;
+  right: 30%;
+}
+
+#home .hero-bg .hero-ornament:nth-child(7) {
+  bottom: 0;
+  right: 2%;
 }
 
 @media (max-width: 991px) {
@@ -466,10 +541,6 @@ h6 {
   }
 }
 
-#home .home-info-content {
-  margin-top: -100px;
-}
-
 #home .home-info-content h1 {
   color: #fff;
   font-family: "Figtree", sans-serif;
@@ -480,17 +551,20 @@ h6 {
   padding-left: 20px;
 }
 
+#home .home-info .home-info-btn {
+  padding-left: 20px;
+}
+
 #home .home-info .btn-get-started,
 #home .home-info .btn-services {
   font-family: "Figtree", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 32px;
-  border-radius: 50px;
+  border-radius: 20px;
   transition: 0.5s;
-  margin: 0 20px 20px 0;
   color: #fff;
 }
 
@@ -499,8 +573,6 @@ h6 {
   border: 10px solid #007bff;
   color: #fff;
   position: relative;
-  top: 65px;
-  left: 15px;
 }
 
 #home .home-info .btn-get-started:hover {
@@ -622,8 +694,13 @@ section {
 /* Profil-Home Section
 --------------------------------*/
 #profil-home {
-  background: url("../img/about.png") center bottom no-repeat;
   padding: 60px 0;
+}
+
+#profil-home .section-header h3 {
+  font-weight: bold;
+  color: black;
+  font-style: normal;
 }
 
 #profil-home .profil-home-container .background {
@@ -636,7 +713,7 @@ section {
 
 #profil-home .profil-home-container .title {
   color: #333;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 32px;
 }
 
@@ -1258,27 +1335,64 @@ section {
 /* Contact Section
 --------------------------------*/
 #contact {
-  background: url("../img/contactus.png");
+  background-image: url("../img/contact-bg.png");
+  height: 60vh;
+  background-position: bottom;
   background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  #contact {
+    background-repeat: no-repeat;
+    background-position-x: -140px;
+  }
 }
 
 #contact .section-header {
-  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding-right: 40px;
 }
 
-#contact .contact-about h3 {
-  font-size: 36px;
-  margin: 0 0 10px 0;
-  padding: 0;
-  line-height: 1;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #007bff;
+#contact .section-header h1 {
+  text-align: center;
+  font-weight: 800;
+  color: white;
+  font-size: 3rem;
+}
+
+#contact .section-header button {
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: 1px slategrey solid;
+  background-color: white;
+  font-weight: 700;
+  max-width: max-content;
+}
+
+@media (max-width: 771px) {
+  #contact .section-header {
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1040px) {
+  #contact .section-header {
+    padding-right: 100px;
+  }
+  #contact .section-header h1 {
+    font-size: 4rem;
+  }
+  #contact .section-header button {
+    font-size: 1.3rem;
+  }
 }
 
 #contact .contact-about p {
