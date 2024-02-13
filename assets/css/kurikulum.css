@@ -1,0 +1,51 @@
+#program-belajar {
+  margin-top: 80px;
+}
+
+#program-belajar .container h1 {
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+#program-belajar .container p {
+  text-align: center;
+  margin-top: 0;
+}
+
+.scroller {
+  overflow-x: auto;
+  width: 100%;
+  display: grid;
+  grid-auto-columns: 90%;
+  grid-auto-flow: column;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .scroller {
+    grid-auto-columns: 45%;
+  }
+}
+
+@media (min-width: 992px) {
+  .scroller {
+    grid-auto-columns: 30%;
+  }
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: cover;
+}
