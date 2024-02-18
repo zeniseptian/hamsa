@@ -1,0 +1,14 @@
+#biaya-pertemuan {
+    margin-top: 80px;
+}
+
+#biaya-pertemuan .container h1 {
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+#biaya-pertemuan .container p{
+    text-align: center;
+    margin-top: 0;
+}
