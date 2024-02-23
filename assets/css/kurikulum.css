@@ -10,6 +10,16 @@
   margin: 0;
 }
 
+#program-belajar h1::before {
+  content: "";
+  width: 250px;
+  height: 20px;
+  position: absolute;
+  background: url(../img/Rectangle\ 69.png);
+  top: 20px;
+  z-index: -1;
+}
+
 #program-belajar .container p {
   text-align: center;
   padding: 8px;

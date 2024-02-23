@@ -1,5 +1,19 @@
-#biaya-pertemuan {
-    margin-top: 80px;
+#biaya-pertemuan h2{
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 1000;
+    font-size: 32px;
+}
+
+#biaya-pertemuan h2::before {
+    content: "";
+    width: 250px;
+    height: 20px;
+    position: absolute;
+    background: url(../img/Rectangle\ 69.png);
+    top: 20px;
+    z-index: -1;
 }
 
 #biaya-pertemuan .container h1 {
@@ -12,3 +26,4 @@
     text-align: center;
     margin-top: 0;
 }
+
